@@ -1,0 +1,33 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: yaml
+data:
+  bootstrap.yaml: |-
+    members_keys_dir: "/var/data/bootstrap/configs/"
+    discovery_keys_dir: "/var/data/bootstrap/discovery-keys/"
+    certificates_out_dir: "/var/data/bootstrap/certs/"
+    certificate_name_offset_from_zero: True
+    keys_name_format: "node-%d.json"
+    discovery_nodes:
+      -
+        host: "something-0.somenet.somenamespace:13831"
+        role: "some_material"
+        cert_name: "something-0.json"
+      -
+        host: "something-1.somenet.somenamespace:13831"
+        role: "some_material"
+        cert_name: "something-1.json"
+      -
+        host: "something-2.somenet.somenamespace:13831"
+        role: "some_material"
+        cert_name: "something-2.json"
+      -
+        host: "something-3.somenet.somenamespace:13831"
+        role: "some_material"
+        cert_name: "something-3.json"
+      -
+        host: "something-4.somenet.somenamespace:13831"
+        role: "some_material"
+        cert_name: "something-4.json"
